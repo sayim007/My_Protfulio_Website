@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jane Smith - Frontend Developer</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc; /* Light gray background */
+            color: #334155; /* Slate text color */
+        }
+        .text-primary {
+            color: #4f46e5; /* Indigo */
+        }
+        .bg-primary {
+            background-color: #4f46e5;
+        }
+        .border-primary {
+            border-color: #4f46e5;
+        }
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        .btn-primary {
+            background-color: #4f46e5;
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #4338ca;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .btn-secondary {
+            background-color: transparent;
+            color: #4f46e5;
+            border: 2px solid #4f46e5;
+        }
+        .btn-secondary:hover {
+            background-color: #4f46e5;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .section-title {
+            font-size: 2.25rem; /* 36px */
+            font-weight: 700;
+            color: #1e293b; /* Darker slate */
+            margin-bottom: 1rem;
+        }
+        .section-subtitle {
+            font-size: 1.125rem; /* 18px */
+            color: #64748b; /* Lighter slate */
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-primary">
+                    <a href="#">JS</a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-slate-700 hover:text-primary transition-colors duration-300">Home</a>
+                    <a href="#about" class="text-slate-700 hover:text-primary transition-colors duration-300">About</a>
+                    <a href="#projects" class="text-slate-700 hover:text-primary transition-colors duration-300">Projects</a>
+                    <a href="#contact" class="text-slate-700 hover:text-primary transition-colors duration-300">Contact</a>
+                </nav>
+                 <button id="mobile-menu-button" class="md:hidden text-slate-800 focus:outline-none">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+         <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <a href="#home" class="block py-3 px-6 text-sm text-slate-700 hover:bg-gray-50 hover:text-primary">Home</a>
+            <a href="#about" class="block py-3 px-6 text-sm text-slate-700 hover:bg-gray-50 hover:text-primary">About</a>
+            <a href="#projects" class="block py-3 px-6 text-sm text-slate-700 hover:bg-gray-50 hover:text-primary">Projects</a>
+            <a href="#contact" class="block py-3 px-6 text-sm text-slate-700 hover:bg-gray-50 hover:text-primary">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 pt-24">
+
+        <!-- Home Section -->
+        <section id="home" class="min-h-[calc(100vh-6rem)] flex items-center">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-slate-800 leading-tight mb-4">
+                        I'm  Himel Hasan
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-primary mb-6">
+                        Frontend Developer & UI/UX Enthusiast
+                    </h2>
+                    <p class="text-lg text-slate-600 mb-8 max-w-xl mx-auto md:mx-0">
+                        Crafting beautiful, intuitive, and high-performing web experiences from concept to launch.
+                    </p>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="#projects" class="btn btn-primary">My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Hire Me</a>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl bg-indigo-100">
+                        <img src="2024-01-05.jpg" alt="Himel Hasam" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">A little bit about my background and passion.</p>
+                <div class="text-lg text-slate-600 space-y-4">
+                    <p>
+                        Hello! I'm Himel Hasan, a dedicated frontend developer with a keen eye for design and a passion for creating seamless user experiences. With over 5 years in the industry, I've had the privilege of working on a diverse range of projects, from small business websites to large-scale web applications.
+                    </p>
+                    <p>
+                        My approach combines technical expertise with a user-centric mindset. I believe that the best websites are not only functional and fast but also delightful to use. I'm always eager to learn new technologies and stay ahead of the curve in the ever-evolving world of web development.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Skills Section -->
+        <section id="skills" class="py-24 bg-white rounded-lg shadow-sm">
+             <div class="max-w-4xl mx-auto text-center">
+                <h2 class="section-title">My Tech Stack</h2>
+                <p class="section-subtitle">Technologies I love to work with.</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+                    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="h-12 mx-auto mb-2" /><span>HTML5</span></div>
+                    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="h-12 mx-auto mb-2" /><span>CSS3</span></div>
+                    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="h-12 mx-auto mb-2" /><span>JavaScript</span></div>
+                    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" class="h-12 mx-auto mb-2" /><span>TypeScript</span></div>
+                    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="h-12 mx-auto mb-2" /><span>React</span></div>
+                    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" class="h-12 mx-auto mb-2" /><span>Next.js</span></div>
+                    <div class="skill-item"><img src="https://w7.pngwing.com/pngs/293/485/png-transparent-tailwind-css-hd-logo.png" class="h-12 mx-auto mb-2" /><span>Tailwind CSS</span></div>
+                    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" class="h-12 mx-auto mb-2" /><span>Figma</span></div>
+                    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="h-12 mx-auto mb-2" /><span>Git</span></div>
+                    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="h-12 mx-auto mb-2" /><span>Node.js</span></div>
+                </div>
+            </div>
+        </section>
+        <style>.skill-item { text-align: center; font-weight: 500; color: #475569; transition: transform 0.2s; } .skill-item:hover { transform: scale(1.1); }</style>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-24">
+            <div class="text-center">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Here are some of the projects I'm proud of.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <div class="overflow-hidden rounded-t-lg">
+                        <img src="https://placehold.co/600x400/f3f4f6/334155?text=Project+One" alt="Project 1" class="w-full h-56 object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Project One</h3>
+                        <p class="text-slate-600 mb-4">A description of the project, its goals, and the outcomes. Keep it concise but informative.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">React</span><span class="tech-tag">Next.js</span><span class="tech-tag">Tailwind CSS</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="project-link">Live Demo <i data-lucide="arrow-up-right" class="inline-block w-4 h-4"></i></a>
+                            <a href="#" class="project-link">GitHub <i data-lucide="github" class="inline-block w-4 h-4"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                     <div class="overflow-hidden rounded-t-lg">
+                        <img src="https://placehold.co/600x400/f3f4f6/334155?text=Project+Two" alt="Project 2" class="w-full h-56 object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Project Two</h3>
+                        <p class="text-slate-600 mb-4">A description of the project, its goals, and the outcomes. Keep it concise but informative.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">Vue.js</span><span class="tech-tag">Firebase</span><span class="tech-tag">SCSS</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="project-link">Live Demo <i data-lucide="arrow-up-right" class="inline-block w-4 h-4"></i></a>
+                            <a href="#" class="project-link">GitHub <i data-lucide="github" class="inline-block w-4 h-4"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="project-card">
+                     <div class="overflow-hidden rounded-t-lg">
+                        <img src="https://placehold.co/600x400/f3f4f6/334155?text=Project+Three" alt="Project 3" class="w-full h-56 object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Project Three</h3>
+                        <p class="text-slate-600 mb-4">A description of the project, its goals, and the outcomes. Keep it concise but informative.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">TypeScript</span><span class="tech-tag">GraphQL</span><span class="tech-tag">Figma</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="project-link">Live Demo <i data-lucide="arrow-up-right" class="inline-block w-4 h-4"></i></a>
+                            <a href="#" class="project-link">GitHub <i data-lucide="github" class="inline-block w-4 h-4"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <style>
+            .project-card { background-color: white; border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); transition: transform 0.3s, box-shadow 0.3s; }
+            .project-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); }
+            .tech-tag { background-color: #eef2ff; color: #4338ca; padding: 4px 12px; border-radius: 9999px; font-size: 0.75rem; font-weight: 500; }
+            .project-link { color: #4f46e5; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.25rem; }
+            .project-link:hover { text-decoration: underline; }
+        </style>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Have a project in mind or just want to say hi? Feel free to reach out.</p>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <form action="#" method="POST">
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <input type="text" name="name" class="contact-input" placeholder="Your Name" required>
+                            <input type="email" name="email" class="contact-input" placeholder="Your Email" required>
+                        </div>
+                        <textarea name="message" rows="5" class="contact-input mb-6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn-primary w-full md:w-auto">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <style>
+            .contact-input { width: 100%; background-color: #f1f5f9; border: 2px solid transparent; color: #334155; padding: 12px 16px; border-radius: 0.5rem; transition: all 0.3s; }
+            .contact-input:focus { outline: none; border-color: #6366f1; background-color: white; }
+        </style>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-slate-400">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2025 Himel Hasan. All Rights Reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="https://www.facebook.com/sayim007" target="_blank" class="hover:text-white"><i data-lucide="facebook"></i></a>
+                    <a href="https://github.com/sayim007" target="_blank" class="hover:text-white"><i data-lucide="github"></i></a>
+                    <a href="https://www.linkedin.com/in/sayim007/" target="_blank" class="hover:text-white"><i data-lucide="linkedin"></i></a>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scroll for navigation links & close mobile menu
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetElement = document.querySelector(this.getAttribute('href'));
+                if(targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Add shadow to header on scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
